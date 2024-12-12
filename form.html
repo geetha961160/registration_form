@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <h1>Online Registration</h1>
+    <form id="registrationForm" action="process.php" method="POST">
+        <!-- Basic Details -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <!-- Additional Fields -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">--Select--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+        
+        <label for="interests">Interests:</label>
+        <input type="checkbox" id="sports" name="interests[]" value="Sports">
+        <label for="sports">Sports</label>
+        <input type="checkbox" id="music" name="interests[]" value="Music">
+        <label for="music">Music</label>
+        <input type="checkbox" id="travel" name="interests[]" value="Travel">
+        <label for="travel">Travel</label>
+        
+        <label for="education">Highest Qualification:</label>
+        <select id="education" name="education" required>
+            <option value="">--Select--</option>
+            <option value="highschool">High School</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="phd">Ph.D.</option>
+        </select>
+        
+        <label for="comments">Comments or Questions:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
